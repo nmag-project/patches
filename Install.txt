@@ -1,12 +1,12 @@
-In Ubuntu 17.10, run the following:
+In Ubuntu 17.10, run the following (Or obtain the equivalent packages in other distros):
 	sudo apt install python ipython python-pip libreadline-dev g++ libblas-dev libreadline-dev make m4 gawk zlib1g-dev liblapack-dev mpich mpi-default-bin ocaml python-tables
 	sudo pip install numpy pyvtk ipython py ply scipy
 
-Replace original Makefile with modified Makefile
+Replace original Makefile with the modified Makefile (included in the current directory)
 
-Replace original shell.py in <nmag-dir>/nsim/interface/nsim/ with modified shell.py
+Replace original shell.py in <nmag-dir>/nsim/interface/nsim/ with modified shell.py (included in the current directory)
 
-Convert old pytables camel casing to underscore using the following commands:
+Convert old pytables camel casing to underscore notation using the following commands:
 
 grep -rl nsim -e isPyTablesFile | xargs sed -i s/isHDF5File/is_pytables_file/g
 grep -rl nsim -e isHDF5File | xargs sed -i s/isHDF5File/is_hdf5_file/g
