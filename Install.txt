@@ -2,7 +2,9 @@ In Ubuntu 17.10, run the following (Or obtain the equivalent packages in other d
 	sudo apt install python ipython python-pip libreadline-dev g++ libblas-dev libreadline-dev make m4 gawk zlib1g-dev liblapack-dev mpich mpi-default-bin ocaml python-tables
 	sudo pip install numpy pyvtk ipython py ply scipy
 
-Replace original Makefile with the modified Makefile (included in the current directory)
+untar nmag-0.2.1.tar.gz using `tar xzvf nmag-0.2.1.tar.gz`. The directory "nmag-0.2.1" will be created, and it will be referred to from now on as <nmag-dir>.
+
+Replace original Makefile in <nmag-dir> with the modified Makefile (included in the current directory)
 
 Replace original shell.py in <nmag-dir>/nsim/interface/nsim/ with modified shell.py (included in the current directory)
 
@@ -16,3 +18,6 @@ grep -rl nsim -e createArray | xargs sed -i s/createArray/create_array/g
 grep -rl nsim -e createCArray | xargs sed -i s/createCArray/create_carray/g
 grep -rl nsim -e createTable | xargs sed -i s/createTable/create_table/g
 grep -rl nsim -e getNode | xargs sed -i s/getNode/get_node/g
+
+Finally, navigate to <nmag-dir> and run `make`.
+The binaries can be found in <nmag_dir>/bin.
