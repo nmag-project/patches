@@ -1,3 +1,8 @@
+
+To compile the code, you can simply run "build.sh", or you can follow the manual instructions below:
+
+--------------------
+
 In Ubuntu 17.10, run the following (Or obtain the equivalent packages in other distros):
 	sudo apt install python ipython python-pip libreadline-dev g++ libblas-dev libreadline-dev make m4 gawk zlib1g-dev liblapack-dev mpich mpi-default-bin ocaml python-tables
 	sudo pip install numpy pyvtk ipython py ply scipy
