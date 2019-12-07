@@ -17,7 +17,7 @@ cd nmag-$version
 mv Makefile Makefile.old
 cp ../Makefile .
 
-# Replace the original shell.py with the modifies shell.py
+# Replace the original shell.py with the modified shell.py
 mv nsim/interface/nsim/shell.py nsim/interface/nsim/shell.py.old
 cp ../shell.py nsim/interface/nsim
 
