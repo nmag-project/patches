@@ -32,6 +32,9 @@ grep -rl nsim -e createCArray | xargs sed -i s/createCArray/create_carray/g
 grep -rl nsim -e createTable | xargs sed -i s/createTable/create_table/g
 grep -rl nsim -e getNode | xargs sed -i s/getNode/get_node/g
 
+# Update out of date python
+grep -rl nsim -e 'if None in vals\[:3\]:' | xargs sed -i 's/if None in vals\[:3\]:/if True in \[val is None for val in vals\[:3\]\]:/g'
+
 # Compile the code
 if make; then
 	echo -e "\n\033[5mCompilation Complete.\033[0m The binaries can be foud in the nmag-$version/bin directory."
