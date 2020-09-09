@@ -1,11 +1,17 @@
 #!/bin/bash
 
+set -e
+
 # Define the nmag version
 version="0.2.1";
 
 # Install Dependencies
-sudo apt install python ipython python-pip libreadline-dev g++ libblas-dev libreadline-dev make m4 gawk zlib1g-dev liblapack-dev mpich mpi-default-bin ocaml python-tables
-sudo pip install numpy pyvtk ipython py ply scipy
+sudo apt install python2 python2-dev ipython libreadline-dev g++ libblas-dev libreadline-dev make m4 gawk zlib1g-dev liblapack-dev mpich mpi-default-bin ocaml
+
+curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
+sudo python2 get-pip.py
+
+sudo pip2 install numpy pyvtk ipython py ply scipy tables
 
 # Untar archive
 tar xzvf nmag-$version.tar.gz
