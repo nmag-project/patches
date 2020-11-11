@@ -6,7 +6,7 @@ set -e
 version="0.2.1";
 
 # Install Dependencies
-sudo apt install python2 python2-dev ipython libreadline-dev g++ libblas-dev libreadline-dev make m4 gawk zlib1g-dev liblapack-dev mpich mpi-default-bin ocaml
+sudo apt install python2 python2-dev libreadline-dev g++ libblas-dev libreadline-dev make m4 gawk zlib1g-dev liblapack-dev mpich mpi-default-bin ocaml
 
 curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
 sudo python2 get-pip.py
