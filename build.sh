@@ -29,6 +29,7 @@ cp ../shell.py nsim/interface/nsim
 
 # Convert old pytables camel casing to underscore notation
 grep -rl nsim -e setNodeAttr | xargs sed -i s/setNodeAttr/set_node_attr/g
+grep -rl nsim -e getNodeAttr | xargs sed -i s/getNodeAttr/get_node_attr/g
 grep -rl nsim -e isPyTablesFile | xargs sed -i s/isPyTablesFile/is_pytables_file/g
 grep -rl nsim -e isHDF5File | xargs sed -i s/isHDF5File/is_hdf5_file/g
 grep -rl nsim -e openFile | xargs sed -i s/openFile/open_file/g
